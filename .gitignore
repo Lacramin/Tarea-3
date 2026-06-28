@@ -1,0 +1,19 @@
+# Ignorar datos empíricos y gráficos generados
+*.csv
+*.png
+
+# Ignorar el dataset pesado
+967_buildings.csv.gz
+*.csv.gz
+
+# Ignorar archivos basura de Python
+__pycache__/
+*.pyc
+
+# Ignorar backups de experimentos
+metricas_backup/
+metricas/graficos/
+
+# Variables de entorno e IDEs
+.env
+.vscode/

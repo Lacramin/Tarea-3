@@ -1,0 +1,111 @@
+
+^W     (F6)      Buscar hacia delante una cadena o expresión regular
+^\     (M-R)     Reemplazar una cadena o expresión regular
+^K     (F9)      Cortar la línea actual (o la región marcada) y guardarla en el
+		   cutbuffer
+^U     (F10)     Pegar el contenido del cutbuffer en la posición del cursor
+
+^T               Ejecutar una función o una orden externa
+^J     (F4)      Justificar el párrafo actual
+
+^C     (F11)     Mostrar la posición del cursor
+^/     (M-G)     Ir a una línea y columna
+
+M-U              Deshacer la última operación
+M-E              Rehacer la última operación deshecha
+
+M-A    (^6)      Marcar texto desde la posición actual del cursor
+M-6    (M-^)     Copiar la línea actual (o la región marcada) y guardarla en el
+		   cutbuffer
+
+M-]              Ir a la llave correspondiente
+
+^Q               Buscar hacia atrás una cadena o expresión regular
+M-Q              Seguir buscando hacia atrás
+M-W              Seguir buscando hacia delante
+
+^B     (◂)       Ir hacia atrás un carácter
+^F     (▸)       Ir hacia delante un carácter
+^◂     (M-Space) Ir hacia atrás una palabra
+^▸     (^Space)  Ir hacia delante una palabra
+^A     (Home)    Ir al principio de la línea actual
+^E     (End)     Ir al final de la línea actual
+
+^P     (▴)       Ir a la línea anterior
+^N     (▾)       Ir a la siguiente línea
+M-▴    (M--)     Remontar una línea sin mover el cursor textualmente
+M-▾    (M-+)     Descender una línea sin mover el cursor textualmente
+
+^▴     (M-7)     Ir al bloque de texto anterior
+^▾     (M-8)     Ir al siguiente bloque de texto
+M-(    (M-9)     Ir al principio del párrafo; después, al del párrafo anterior
+M-)    (M-0)     Ir al final del párrafo; después, al del párrafo siguiente
+
+^Y     (PgUp)    Ir una pantalla hacia arriba
+^V     (PgDn)    Ir una pantalla hacia abajo
+M-\    (^Home)   Ir a la primera línea del fichero
+M-/    (^End)    Ir a la última línea del fichero
+
+M-◂    (M-,)     Cambiar al búfer de fichero anterior
+M-▸    (M-.)     Cambiar al siguiente búfer de fichero
+
+^I     (Tab)     Insertar un carácter de tabulación en la posición del cursor (o
+		   sangrar las líneas marcadas)
+^M     (Enter)   Insertar un retorno de carro en la posición del cursor
+
+^H     (Bsp)     Borrar el carácter a la izquierda del cursor
+^D     (Del)     Borrar el carácter bajo el cursor
+
+M-Bsp  (Sh-^Del) Borrar hacia atrás desde el cursor hasta el principio de
+		   palabra
+^Del             Borrar hacia delante desde el cursor hasta principio de
+		   siguiente palabra
+M-T              Cortar desde el cursor hasta el final del fichero
+
+M-J              Justificar el fichero completo
+M-D              Contar el número de líneas, palabras y caracteres
+M-V              Insertar la próxima pulsación literalmente
+
+M-}              Sangrar la línea actual (o las líneas marcadas)
+M-{    (Sh-Tab)  Quitar sangrado de la línea actual (o las líneas marcadas)
+
+M-3              Comentar/descomentar la línea actual (o las líneas marcadas)
+^]               Intenta completar la palabra actual
+
+M-:              Iniciar/parar grabación de macro
+M-;              Ejecutar la última macro grabada
+
+M-Del            Desechar la línea actual (o la región marcada)
+
+M-Ins            Coloca o retira un ancla en la línea actual
+M-PgUp           Salta hacia atrás hasta el ancla más cercana
+M-PgDn           Salta hacia delante hasta el ancla más cercana
+
+F12              Invocar el corrector ortográfico (si está disponible)
+M-B              Invocar el corrector de sintaxis (si está disponible)
+M-F              Invocar un programa para aplicar formato/organizar/manipular el
+		   búfer
+
+		 Suspender el editor (vuelve a la consola)
+^L               Redibujar la pantalla actual
+^L               Centrar la línea en la que está el cursor
+
+^S               Guardar fichero sin preguntar
+
+M-Z		 Interfaz oculta activar/desactivar
+M-X		 Modo de ayuda activar/desactivar
+M-C		 Mostrar constantemente la posición del cursor
+		   activar/desactivar
+M-S		 Ajuste suave de líneas largas activar/desactivar
+M-N		 Numeración de líneas activar/desactivar
+M-P		 Muestra blancos activar/desactivar
+M-Y		 Coloreado de sintaxis activar/desactivar
+
+M-H		 Tecla de inicio inteligente activar/desactivar
+M-I		 Auto-sangrado activar/desactivar
+M-K		 Cortado desde el cursor hasta el final de línea
+		   activar/desactivar
+M-L		 Ajuste estricto de líneas largas activar/desactivar
+M-O		 Conversión de pulsaciones de tabulador a espacios
+		   activar/desactivar
+M-M		 Soporte para ratón activar/desactivar
