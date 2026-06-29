@@ -44,8 +44,9 @@ datos_agrupados = datos_formateados \
     )
 
 def escribir_lote_es(dataframe_lote, id_lote):
-    # Creamos un ID único usando el inicio de la ventana de tiempo
-    df_final = dataframe_lote.withColumn("id_documento", col("window.start").cast("string"))
+    df_final = dataframe_lote \
+        .withColumn("id_documento", col("window.start").cast("string")) \
+        .withColumn("@timestamp", col("window.start").cast("timestamp"))
     
     df_final.write \
         .format("org.elasticsearch.spark.sql") \
