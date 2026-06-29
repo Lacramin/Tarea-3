@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import from_json, col, window, count, percentile_approx, when
+from pyspark.sql.functions import from_json, col, window, count, percentile_approx, when, avg, lower
 from pyspark.sql.types import StructType, StructField, StringType, DoubleType, TimestampType, IntegerType
 
 sesion_spark = SparkSession.builder \
@@ -37,10 +37,10 @@ datos_agrupados = datos_formateados \
     .groupBy(window(col("marca_tiempo"), "1 minute")) \
     .agg(
         count("*").alias("rendimiento_minuto"),
-        percentile_approx("latencia", 0.5).alias("latencia_pcincuenta"),
-        percentile_approx("latencia", 0.95).alias("latencia_pnoventaycinco"),
-        (count(when(col("resultado_cache") == "hit", True)) / count("*")).alias("tasa_aciertos"),
-        (count(when(col("cantidad_reintentos") > 0, True)) / count("*")).alias("tasa_reintentos")
+        (percentile_approx("latencia", 0.5) * 1000).cast("double").alias("latencia_pcincuenta"),
+        (percentile_approx("latencia", 0.95) * 1000).cast("double").alias("latencia_pnoventaycinco"),
+        avg(when(lower(col("resultado_cache")) == "hit", 1.0).otherwise(0.0)).alias("tasa_aciertos"),
+        avg(when(col("cantidad_reintentos") > 0, 1.0).otherwise(0.0)).alias("tasa_reintentos")
     )
 
 def escribir_lote_es(dataframe_lote, id_lote):
